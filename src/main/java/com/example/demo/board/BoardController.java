@@ -27,7 +27,7 @@ public class BoardController {
 
   }
   
-  @GetMapping("/")
+  @GetMapping("/aa")
   public String index(Model Model) {
     
     return "board/index";

@@ -11,9 +11,9 @@ public class BoardTestController {
   @Test
   public void insertTest() {
     Board board = new Board();
-    board.setContent("테스트 콘텐츠");
-    board.setTitle("테스트 제목");
-    board.setUser_id("testid");
+    // board.setContent("테스트 콘텐츠");
+    // board.setTitle("테스트 제목");
+    // board.setUser_id("testid");
 
     bsi.insert(board);
 

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
 
-  @ResponseBody
+  
   @RequestMapping("test")
   public String test() {
 
