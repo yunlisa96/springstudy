@@ -10,7 +10,7 @@ public class IndexController {
   @ResponseBody
   @RequestMapping("test")
   public String test() {
-    
+
     return "됐다!";
   }
   

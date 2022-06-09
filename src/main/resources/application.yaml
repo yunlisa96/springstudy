@@ -21,3 +21,6 @@ spring:
       auto-commit: true
 server:
   port: 8080
+
+logging:
+  config: classpath:logback.xml
