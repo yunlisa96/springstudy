@@ -1,0 +1,23 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+  datasource:
+    hikari:
+      jndi-name: jdbc/postgresqldb
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://192.168.0.2:5433/yunjidb
+      username: yunji
+      password: qwer123
+      connection-timeout: 30000
+      max-lifetime: 55000
+      maximum-pool-size: 10
+      leak-detection-threshold: 2000
+      connection-test-query: SELECT 1
+      auto-commit: true
+server:
+  port: 8080
