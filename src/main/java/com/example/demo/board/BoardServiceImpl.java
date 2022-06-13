@@ -11,6 +11,7 @@ public class BoardServiceImpl implements BoardService {
 
   @Override
   public int insert(Board board) {
+    
     return bm.insertBoard(board);
   }
   

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
+
 @Controller
 public class BoardController {
   
@@ -17,11 +18,7 @@ public class BoardController {
   @RequestMapping("/insert")
   @ResponseBody
   public int insert(Board board) {
-
-    // board.setContent("테스트 콘텐츠");
-    // board.setTitle("테스트 제목");
-    // board.setUser_id("testid");
-
+System.out.println("board====="+board.toString());
     int result = boardSVI.insert(board);
     return result;
 
