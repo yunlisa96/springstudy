@@ -18,7 +18,6 @@ public class BoardController {
   @RequestMapping("/insert")
   @ResponseBody
   public int insert(Board board) {
-System.out.println("board====="+board.toString());
     int result = boardSVI.insert(board);
     return result;
 

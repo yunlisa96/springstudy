@@ -25,17 +25,5 @@ public class Board {
   String user_id;
 
   int view_cnt;
-
-public void setContent(String string) {
-  this.content = string;
-}
-
-public void setTitle(String string) {
-  this.title = string;
-}
-
-public void setUser_id(String string) {
-  this.user_id = string;
-}
   
 }
