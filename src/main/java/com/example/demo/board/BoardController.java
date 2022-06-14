@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 
 
@@ -15,11 +16,26 @@ public class BoardController {
   @Autowired
   private BoardServiceImpl boardSVI;
 
+  // @RequestMapping("/insert")
+  // @ResponseBody
+  // public int insert(Board board) {
+  //   int result = boardSVI.insert(board);
+  //   return result;
+
+  // }
+
   @RequestMapping("/insert")
-  @ResponseBody
-  public int insert(Board board) {
+  public String insert(Board board,Model model) {
     int result = boardSVI.insert(board);
-    return result;
+    String msg = "";
+    if(result == 1){
+      msg = "성공";
+    }else{
+      msg = "실패";
+    }
+    //ModelAndView mv = new ModelAndView();
+    model.addAttribute("msg", msg);
+    return "board/index2";
 
   }
   
