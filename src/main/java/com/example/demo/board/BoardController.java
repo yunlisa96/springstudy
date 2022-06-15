@@ -39,7 +39,7 @@ public class BoardController {
 
   }
   
-  @GetMapping("/aa")
+  @GetMapping("/insertpage")
   public String index(Model Model) {
     
     return "board/index";
