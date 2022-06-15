@@ -50,8 +50,13 @@ public class BoardController {
   
   @RequestMapping("list")
   public String list(Model model) {
-    List<Board> list = new ArrayList<>();
+    List<Board> list = new ArrayList<Board>();
     list = boardSVI.list();
+    System.out.println("ssssssss===="+list.size());
+    for(Board b : list){
+System.out.println(b.getTitle());
+System.out.println(b.getContent());
+    }
     model.addAttribute("list", list);
     return "/board/list";
   }

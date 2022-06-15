@@ -9,9 +9,15 @@
 <title>Index.jsp</title>
 </head>
 <body>
-<c:forEach var="list" items="${list}" varStatus="status">
-<p>${status.count} : <c:out value="${list.title}" />
-</p>
+    <table border="1">
+<c:forEach var="list3" items="${list}" varStatus="status">
+<tr>
+    <td>${status.count}</td>
+    <td>${list3.title}</td>
+    <td>${list3.user_id}</td>
+    <td>${list3.rgstr_date}</td>
+</tr>
 </c:forEach>
+</table>
 </body>
 </html>
