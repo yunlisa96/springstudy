@@ -1,5 +1,8 @@
 package com.example.demo.board;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,8 +44,16 @@ public class BoardController {
   
   @GetMapping("/insertpage")
   public String index(Model Model) {
-    
+
     return "board/index";
+  }
+  
+  @RequestMapping("list")
+  public String list(Model model) {
+    List<Board> list = new ArrayList<>();
+    list = boardSVI.list();
+    model.addAttribute("list", list);
+    return "/board/list";
   }
   
 }

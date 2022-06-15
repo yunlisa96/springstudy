@@ -23,4 +23,8 @@
       )
 	</insert>
 
+  <select id="list" resultType="com.example.demo.board.Board">
+  select * from tb_boards order by rgstr_date desc
+  </select>
+
 </mapper>
