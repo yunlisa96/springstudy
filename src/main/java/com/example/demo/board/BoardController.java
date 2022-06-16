@@ -8,8 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 
 
@@ -48,17 +46,28 @@ public class BoardController {
     return "board/index";
   }
   
-  @RequestMapping("list")
-  public String list(Model model) {
-    List<Board> list = new ArrayList<Board>();
-    list = boardSVI.list();
-    System.out.println("ssssssss===="+list.size());
-    for(Board b : list){
-System.out.println(b.getTitle());
-System.out.println(b.getContent());
-    }
-    model.addAttribute("list", list);
-    return "/board/list";
-  }
+//   @RequestMapping("list")
+//   public String list(Model model) {
+//     List<Board> list = new ArrayList<Board>();
+//     list = boardSVI.list();
+//     System.out.println("ssssssss===="+list.size());
+//     for(Board b : list){
+// System.out.println(b.getTitle());
+// System.out.println(b.getContent());
+//     }
+//     model.addAttribute("list", list);
+//     return "/board/list";
+//   }
   
-}
+  @RequestMapping("list2")
+public String list(Model model) {
+  List<Board> list = new ArrayList<Board>();
+  list = boardSVI.list();
+  for(Board b : list){
+    System.out.println(b.getTitle());
+    System.out.println(b.getContent());
+  }
+  model.addAttribute("list", list);
+  return "/board/list";
+  }
+} 
