@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +10,14 @@
 </head>
 <body>
 <form name="frm" id="frm">
-title: <input type="text" id="title" name="title" /> <br/>
-content: <input type="text" id="content" name="content" /><br/>
-user_id: <input type="text" id="user_id" name="user_id" /><br/>
-<input type="button" value="등록" onclick="insert();"/>
+제목:  <c:out value="${board.title}" /> <br/>
+작성자: <c:out value="${board.user_id}" /> <br/>
+조회수: <c:out value="${board.view_cnt}" /> <br/>
+작성일: <c:out value="${board.rgstr_date}" /> <br/>
+내용: <c:out value="${board.content}" /> <br/>
+<input type="button" value="수정" onclick="location.href='/editpage?seq=${board.seq}'"/>
+<input type="button" value="삭제" onclick="insert();"/>
+<input type="button" value="목록" onclick="location.href='/list'"/>
 </form>
 </body>
 <script>

@@ -13,5 +13,11 @@ public class IndexController {
 
     return "됐다!";
   }
+
+  @RequestMapping("")
+  public String index() {
+
+    return "redirect:/list";
+  }
   
 }

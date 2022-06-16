@@ -24,5 +24,17 @@ public class BoardServiceImpl implements BoardService {
     List<Board> list = bm.list();
     return list;
   }
+
+  @Override
+  public Board view(Board vo) {
+    // TODO Auto-generated method stub
+    return bm.view(vo);
+  }
+
+  @Override
+  public int edit(Board vo) {
+    // TODO Auto-generated method stub
+    return bm.edit(vo);
+  }
   
 }

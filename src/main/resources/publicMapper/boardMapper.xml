@@ -24,7 +24,19 @@
 	</insert>
 
   <select id="list" resultType="com.example.demo.board.Board">
-  select * from tb_boards order by rgstr_date desc
+    select * from tb_boards order by rgstr_date desc
   </select>
+
+  <select id="view" resultType="com.example.demo.board.Board">
+    select * from tb_boards where seq = #{seq}
+  </select>
+
+  <update id="edit" parameterType="com.example.demo.board.Board">
+    update tb_boards set 
+      title = #{title}, 
+      content = #{content}, 
+      updt_date = now() 
+    where seq = #{seq}
+  </update>
 
 </mapper>
