@@ -36,5 +36,12 @@ public class BoardServiceImpl implements BoardService {
     // TODO Auto-generated method stub
     return bm.edit(vo);
   }
+
+  @Override
+  public int countup(Board board) {
+    int result = bm.countup(board);
+    // TODO Auto-generated method stub
+    return result;
+  }
   
 }

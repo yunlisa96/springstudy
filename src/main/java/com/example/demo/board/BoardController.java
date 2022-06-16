@@ -64,6 +64,7 @@ public class BoardController {
   @RequestMapping("view")
   public String view(Model model, Board vo) {
     System.out.println(vo);
+    int result = boardSVI.countup(vo);
     vo = boardSVI.view(vo);
     System.out.println(vo);
     model.addAttribute("board", vo);

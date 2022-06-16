@@ -11,5 +11,7 @@ public interface BoardMapper {
   public Board view(Board vo);
 
   public int edit(Board vo);
+
+  public int countup(Board board);
   
 }

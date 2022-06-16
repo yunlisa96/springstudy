@@ -35,8 +35,13 @@
     update tb_boards set 
       title = #{title}, 
       content = #{content}, 
-      updt_date = now() 
+      updt_date = "now() 
     where seq = #{seq}
   </update>
 
+  <update id="countup" parameterType="com.example.demo.board.Board">
+    update tb_boards set
+      view_cnt = view_cnt + 1
+    where seq = #{seq}
+  </update>
 </mapper>
