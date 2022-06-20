@@ -16,7 +16,7 @@
 작성일: <c:out value="${board.rgstr_date}" /> <br/>
 내용: <c:out value="${board.content}" /> <br/>
 <input type="button" value="수정" onclick="location.href='/editpage?seq=${board.seq}'"/>
-<input type="button" value="삭제" onclick="insert();"/>
+<input type="button" value="삭제" onclick="location.href='/delete?seq=${board.seq}'"/>
 <input type="button" value="목록" onclick="location.href='/list'"/>
 </form>
 </body>

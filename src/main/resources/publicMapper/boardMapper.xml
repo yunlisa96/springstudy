@@ -35,7 +35,7 @@
     update tb_boards set 
       title = #{title}, 
       content = #{content}, 
-      updt_date = "now() 
+      updt_date = now() 
     where seq = #{seq}
   </update>
 
@@ -44,4 +44,9 @@
       view_cnt = view_cnt + 1
     where seq = #{seq}
   </update>
+
+  <delete id="delete" parameterType="com.example.demo.board.Board">
+    DELETE FROM public.tb_boards
+    WHERE seq = #{seq}
+  </delete>
 </mapper>

@@ -14,4 +14,7 @@ public interface BoardService {
 
   public int countup(Board board);
   
+  public int countup2(Board board);
+
+  public int delete(Board board);
 }

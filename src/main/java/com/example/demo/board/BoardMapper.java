@@ -13,5 +13,7 @@ public interface BoardMapper {
   public int edit(Board vo);
 
   public int countup(Board board);
+
+  public int delete(Board board);
   
 }

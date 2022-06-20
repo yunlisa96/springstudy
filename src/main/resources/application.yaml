@@ -10,9 +10,9 @@ spring:
     hikari:
       jndi-name: jdbc/postgresqldb
       driver-class-name: org.postgresql.Driver
-      jdbc-url: jdbc:postgresql://192.168.0.2:5433/yunjidb
-      username: yunji
-      password: qwer123
+      jdbc-url: jdbc:postgresql://localhost:5432/yunjidb
+      username: hamonize
+      password: password
       connection-timeout: 30000
       max-lifetime: 55000
       maximum-pool-size: 10
@@ -20,7 +20,7 @@ spring:
       connection-test-query: SELECT 1
       auto-commit: true
 server:
-  port: 8080
+  port: 8081
 
 logging:
   config: classpath:logback.xml

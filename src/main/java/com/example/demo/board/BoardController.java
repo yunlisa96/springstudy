@@ -84,13 +84,19 @@ public class BoardController {
   public String edit(Model model, Board vo) {
     int result = boardSVI.edit(vo);
     String msg = "";
-    if(result == 1){
+    if (result == 1) {
       msg = "성공";
     } else {
       msg = "실패";
     }
-    System.out.println("msg======="+msg);
+    System.out.println("msg=======" + msg);
     //model.addAttribute("board", vo);
+    return "redirect:/list";
+  }
+  
+  @RequestMapping("delete")
+  public String delete(Model model, Board vo) {
+    int result = boardSVI.delete(vo);
     return "redirect:/list";
   }
   
