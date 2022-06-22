@@ -4,6 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .history/
+/src/main/resources/application.yaml
 
 ### STS ###
 .apt_generated
