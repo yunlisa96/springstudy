@@ -11,7 +11,7 @@
       id,
       pw,
       email,
-      tell,
+      tel,
       address,
       rgstr_date,
       updt_date)
@@ -20,7 +20,7 @@
       #{id},
       #{pw},
       #{email},
-      #{tell},
+      #{tel},
       #{address},
       now(),
       now()

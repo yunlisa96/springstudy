@@ -13,7 +13,7 @@ public class User {
   String id;
   String pw;
   String email;
-  String tell;
+  String tel;
   String address;
   Timestamp rgstr_date;
   Timestamp updt_date;
