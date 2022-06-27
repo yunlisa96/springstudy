@@ -26,6 +26,8 @@
       now()
       )
 	</insert>
-
+  <select id="list" resultType="com.example.demo.user.User">
+    select * from tb_user order by rgstr_date desc
+  </select>
 
 </mapper>

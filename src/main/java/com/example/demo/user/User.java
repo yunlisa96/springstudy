@@ -1,6 +1,8 @@
 package com.example.demo.user;
 
-import java.security.Timestamp;
+
+
+import java.sql.Timestamp;
 
 import lombok.Getter;
 import lombok.Setter;

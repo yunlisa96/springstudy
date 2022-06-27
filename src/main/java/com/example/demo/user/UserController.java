@@ -1,5 +1,8 @@
 package com.example.demo.user;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,4 +35,15 @@ String msg = "";
     return msg;
     
   } 
+  @RequestMapping("/signuplist")
+  public String signuplist(Model model){
+    List<User> list = new ArrayList<User>();
+    list = userSVI.list();
+    for(User b : list){
+      System.out.println(b.getId());
+      System.out.println(b.getRgstr_date());
+    }
+    model.addAttribute("list", list);
+    return "user/signuplist";
+  }
 }
