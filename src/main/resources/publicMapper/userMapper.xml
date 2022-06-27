@@ -30,4 +30,7 @@
     select * from tb_user order by rgstr_date desc
   </select>
 
+  <select id="userinfo" resultType="com.example.demo.user.User">
+    select * from tb_user where seq = #{seq}
+  </select>
 </mapper>

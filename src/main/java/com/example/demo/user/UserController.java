@@ -46,4 +46,12 @@ String msg = "";
     model.addAttribute("list", list);
     return "user/signuplist";
   }
+
+  @RequestMapping("userinfo")
+  public String userinfo(User user, Model model) {
+    user = userSVI.userinfo(user);
+    model.addAttribute("user",user);
+    return "/user/userinfo";
+  }
+  
 }

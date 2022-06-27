@@ -24,5 +24,13 @@ public class UserServiceImpl implements UserService{
     // TODO Auto-generated method stub
     return list;
   }
+
+
+@Override
+public User userinfo(User user) {
+
+  // TODO Auto-generated method stub
+  return um.userinfo(user);
+}
   
 }

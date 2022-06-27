@@ -20,7 +20,7 @@
 <c:forEach var="user" items="${list}" varStatus="status">
 <tr>
     <td>${status.count}</td>
-    <td>${user.id}</td>
+    <td><a href="/userinfo?seq=${user.seq}">${user.id}</a></td>
     <td>${user.rgstr_date}</td>
 </tr>
 </c:forEach>

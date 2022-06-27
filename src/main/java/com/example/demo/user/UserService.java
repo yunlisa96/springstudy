@@ -4,5 +4,8 @@ import java.util.List;
 
 public interface UserService {
   public int adduser(User user); 
+
   public List<User> list();
+
+  public User userinfo(User user);
 }
