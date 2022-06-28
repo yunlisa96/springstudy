@@ -11,5 +11,9 @@ public interface UserMapper {
 
   public int useredit2(User user);
 
+  public int userdel(User user);
+
+  public User getCurrentpage();
+
 
 }

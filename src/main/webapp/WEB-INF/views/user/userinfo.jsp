@@ -17,31 +17,31 @@ tel: <c:out value="${user.tel}" /> <br/>
 address: <c:out value="${user.address}" /> <br/>
 작성일: <c:out value="${user.rgstr_date}" /> <br/>
 <input type="button" value="수정" onclick="location.href='/useredit?seq=${user.seq}'"/>
-<!-- <input type="button" value="삭제" onclick="location.href='/delete?seq=${user.seq}'"/> -->
+<input type="button" value="삭제" onclick="location.href='/userdel?seq=${user.seq}'"/>
 <input type="button" value="목록" onclick="location.href='/signuplist'"/>
 </form>
 </body>
 <script>
     function insert(){
-        const title = document.getElementById("title").value;
-        const content = document.getElementById("content").value;
-        const user_id = document.getElementById("user_id").value;
-        if(title == ""){
-            alert("제목을 입력해주세여.");
-            return false;
-        }
-        if (content == ""){
-            alert("내용 입력");
-            return false;
-        }
-        if(user_id == "") {
-            alert("아이디 입력");
-            return false;
+        // const title = document.getElementById("title").value;
+        // const content = document.getElementById("content").value;
+        // const user_id = document.getElementById("user_id").value;
+        // if(title == ""){
+        //     alert("제목을 입력해주세여.");
+        //     return false;
+        // }
+        // if (content == ""){
+        //     alert("내용 입력");
+        //     return false;
+        // }
+        // if(user_id == "") {
+        //     alert("아이디 입력");
+        //     return false;
         }
 document.getElementById("frm").method="post";
-document.getElementById("frm").action="/insert";
-document.getElementById("frm").submit();
-        alert("success");
-    }
+document.getElementById("frm").action="/signuplist";
+// document.getElementById("frm").submit();
+//         alert("success");
+    
 </script>
 </html>

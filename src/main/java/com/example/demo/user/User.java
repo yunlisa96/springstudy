@@ -19,5 +19,6 @@ public class User {
   String address;
   Timestamp rgstr_date;
   Timestamp updt_date;
+  private int currentPage;
   
 }

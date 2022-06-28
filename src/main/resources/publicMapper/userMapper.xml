@@ -44,4 +44,10 @@
       updt_date =now()
     where seq = #{seq}
   </update>
+
+    <delete id="userdel" parameterType="com.example.demo.user.User">
+      DELETE FROM public.tb_user
+      WHERE seq = #{seq}
+    </delete>
+
 </mapper>

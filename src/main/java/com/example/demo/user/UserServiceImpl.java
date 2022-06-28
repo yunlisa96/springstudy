@@ -38,5 +38,26 @@ public int useredit2(User user) {
   // TODO Auto-generated method stub
   return um.useredit2(user);
 }
+
+@Override
+public int userdel(User user) {
   
+  // TODO Auto-generated method stub
+  return um.userdel(user);
+}
+
+public int listCount() {
+  return 0;
+}
+
+public User getCurrentPage(){
+  return um.getCurrentpage();
+}
+
+@Override
+public User getCurrentPage(User user) {
+  // TODO Auto-generated method stub
+  return um.getCurrentpage();
+}
+
 }
