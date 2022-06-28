@@ -8,6 +8,8 @@ public interface BoardMapper {
 
   public List<Board> list();
 
+  public int listCount();
+
   public Board view(Board vo);
 
   public int edit(Board vo);

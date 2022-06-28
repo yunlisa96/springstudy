@@ -26,6 +26,10 @@
   <select id="list" resultType="com.example.demo.board.Board">
     select * from tb_boards order by rgstr_date desc
   </select>
+  
+  <select id="listCount">
+    select count(*) from tb_boards
+  </select>
 
   <select id="view" resultType="com.example.demo.board.Board">
     select * from tb_boards where seq = #{seq}

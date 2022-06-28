@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.paging.PagingUtil;
+import com.example.demo.paging.PagingVo;
+
 
 
 @Controller
@@ -49,15 +52,21 @@ public class BoardController {
   }
   
   @RequestMapping("list")
-  public String list(Model model) {
+  public String list(Model model, PagingVo pagingVo, Board vo) {
+    
+    // 페이징
+		pagingVo.setCurrentPage(vo.getCurrentPage());
+		pagingVo = PagingUtil.setDefaultPaging(PagingUtil.DefaultPaging, pagingVo);
+
+		int cnt = Integer.parseInt(boardSVI.listCount() + "");
+		pagingVo.setTotalRecordSize(cnt);
+    pagingVo = PagingUtil.setPaging(pagingVo);
+    
     List<Board> list = new ArrayList<Board>();
     list = boardSVI.list();
-    System.out.println("ssssssss===="+list.size());
-    for(Board b : list){
-      System.out.println(b.getTitle());
-      System.out.println(b.getContent());
-    }
+    
     model.addAttribute("list", list);
+    model.addAttribute("pagingVo", pagingVo);
     return "/board/list";
   }
 

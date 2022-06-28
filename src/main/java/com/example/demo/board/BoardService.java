@@ -8,6 +8,8 @@ public interface BoardService {
 
   public List<Board> list();
 
+  public int listCount();
+
   public Board view(Board vo);
   
   public int edit(Board vo);

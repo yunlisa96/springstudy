@@ -25,5 +25,7 @@ public class Board {
   String user_id;
 
   int view_cnt;
+
+  private int currentPage;
   
 }
