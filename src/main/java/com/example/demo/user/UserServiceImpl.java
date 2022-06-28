@@ -32,5 +32,11 @@ public User userinfo(User user) {
   // TODO Auto-generated method stub
   return um.userinfo(user);
 }
+
+@Override
+public int useredit2(User user) {
+  // TODO Auto-generated method stub
+  return um.useredit2(user);
+}
   
 }

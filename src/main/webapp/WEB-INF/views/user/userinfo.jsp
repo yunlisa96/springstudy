@@ -16,8 +16,8 @@ email: <c:out value="${user.email}" /> <br/>
 tel: <c:out value="${user.tel}" /> <br/>
 address: <c:out value="${user.address}" /> <br/>
 작성일: <c:out value="${user.rgstr_date}" /> <br/>
-<!-- <input type="button" value="수정" onclick="location.href='/editpage?seq=${board.seq}'"/>
-<input type="button" value="삭제" onclick="location.href='/delete?seq=${board.seq}'"/> -->
+<input type="button" value="수정" onclick="location.href='/useredit?seq=${user.seq}'"/>
+<!-- <input type="button" value="삭제" onclick="location.href='/delete?seq=${user.seq}'"/> -->
 <input type="button" value="목록" onclick="location.href='/signuplist'"/>
 </form>
 </body>

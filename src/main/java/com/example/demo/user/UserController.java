@@ -53,5 +53,17 @@ String msg = "";
     model.addAttribute("user",user);
     return "/user/userinfo";
   }
-  
+
+  @RequestMapping("useredit")
+  public String useredit(User user, Model model){
+    user = userSVI.userinfo(user);
+    model.addAttribute("user",user);
+    return "/user/useredit";
+  }
+
+  @RequestMapping("useredit2")
+  public String useredit2(User user, Model model){
+    int result = userSVI.useredit2(user);
+    return "redirect:/signuplist";
+  }
 }

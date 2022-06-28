@@ -8,4 +8,8 @@ public interface UserService {
   public List<User> list();
 
   public User userinfo(User user);
+
+  public int useredit2(User user);
+
+
 }

@@ -33,4 +33,15 @@
   <select id="userinfo" resultType="com.example.demo.user.User">
     select * from tb_user where seq = #{seq}
   </select>
+  
+  <update id="useredit2" parameterType="com.example.demo.user.User">
+    update tb_user set
+      id = #{id},
+      pw = #{pw},
+      tel = #{tel},
+      email = #{email},
+      address = #{address},
+      updt_date =now()
+    where seq = #{seq}
+  </update>
 </mapper>

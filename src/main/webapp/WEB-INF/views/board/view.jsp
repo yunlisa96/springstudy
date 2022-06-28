@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<!-- css -->
+<link href="/material/assets/css/material-kit.min.css" rel="stylesheet" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +12,49 @@
 </head>
 <body>
 <form name="frm" id="frm">
-제목:  <c:out value="${board.title}" /> <br/>
-작성자: <c:out value="${board.user_id}" /> <br/>
-조회수: <c:out value="${board.view_cnt}" /> <br/>
-작성일: <c:out value="${board.rgstr_date}" /> <br/>
-내용: <c:out value="${board.content}" /> <br/>
+    <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
+    <section class="py-sm-7 py-5 position-relative">
+        <div class="container">
+        <div class="row">
+        <div class="col-12 mx-auto">
+        <div class="mt-n8 mt-md-n9 text-center">
+        <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="../assets/img/bruce-mars.jpg" alt="bruce" loading="lazy">
+        </div>
+        <div class="row py-5">
+        <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mx-auto">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+        <h3 class="mb-0"><c:out value="${board.title}" /></h3>
+        <div class="d-block">
+        <button type="button" class="btn btn-sm btn-outline-info text-nowrap mb-0">Follow</button>
+        </div>
+        </div>
+        <div class="row mb-4">
+        <div class="col-auto">
+        <span class="h6"><c:out value="${board.user_id}" /></span>
+        <span>작성자</span>
+        </div>
+        <div class="col-auto">
+        <span class="h6"><c:out value="${board.view_cnt}" /></span>
+        <span>조회수</span>
+        </div>
+        <div class="col-auto">
+        <span class="h6"><c:out value="${board.rgstr_date}" /></span>
+        <span>작성일</span>
+        </div>
+        </div>
+        <p class="text-lg mb-0">
+            <c:out value="${board.content}" /><br>
+            <!-- <a href="javascript:;" class="text-info icon-move-right">More about me -->
+        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+        </a>
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    </div>
 <input type="button" value="수정" onclick="location.href='/editpage?seq=${board.seq}'"/>
 <input type="button" value="삭제" onclick="location.href='/delete?seq=${board.seq}'"/>
 <input type="button" value="목록" onclick="location.href='/list'"/>

@@ -56,5 +56,11 @@ public class BoardServiceImpl implements BoardService {
     // TODO Auto-generated method stub
     return result;
   }
+
+  @Override
+  public int listCount() {
+    // TODO Auto-generated method stub
+    return 0;
+  }
   
 }
