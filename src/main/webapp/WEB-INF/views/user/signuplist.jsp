@@ -21,7 +21,7 @@
             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">번호</th>
             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">아이디</th>
             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">등록일</th>
-         </tr>
+        </tr>
         </thead>
         <tbody>
             <c:forEach var="user" items="${list}" varStatus="status">
@@ -44,12 +44,11 @@
                 <td class="align-middle text-center">
                   <span class="text-secondary text-xs font-weight-normal">${user.rgstr_date}</span>
                 </td>
-                <td class="align-middle">
+                <!-- <td class="align-middle">
                   <%-- <a href="javascript:;" class="text-secondary font-weight-normal text-xs" data-toggle="tooltip" data-original-title="Edit user">
                     Edit
                   </a> --%>
-                  <span class="text-secondary text-xs font-weight-normal">${user.userinfo_cnt}</span>
-                </td>
+                </td> -->
               </tr>
           </c:forEach>
             </tbody>
