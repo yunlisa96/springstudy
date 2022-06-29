@@ -20,5 +20,6 @@ public class User {
   Timestamp rgstr_date;
   Timestamp updt_date;
   private int currentPage;
+  int userinfo_cnt;
   
 }
