@@ -2,6 +2,8 @@ package com.example.demo.board;
 
 import java.sql.Timestamp;
 
+import com.example.demo.paging.PagingVo;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,22 +12,22 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Board {
+public class Board extends PagingVo{
 
-  Long seq;
+  private Long seq;
 
-  String content;
+  private String content;
 
-  String title;
+  private String title;
 
-  Timestamp rgstr_date;
+  private Timestamp rgstr_date;
 
-  Timestamp updt_date;
+  private Timestamp updt_date;
 
-  String user_id;
+  private String user_id;
 
-  int view_cnt;
+  private int view_cnt;
 
-  private int currentPage;
+  private int defaultpage;
   
 }

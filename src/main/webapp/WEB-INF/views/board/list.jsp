@@ -13,6 +13,107 @@
 <title>Index.jsp</title>
 </head>
 <body>
+<script type="text/javascript">
+$(function() {
+		
+    var startPage = ${paging.startPage};
+		var endPage = ${paging.endPage}; 
+		var totalPageSize = ${paging.totalPageSize};
+		var currentPage = ${paging.currentPage};
+		var totalRecordSize = ${paging.totalRecordSize}; 
+   
+		var viewName='classMngrList';
+		if(totalRecordSize > 0){
+			$(".page_num").html(getPaging(startPage,endPage,totalPageSize,currentPage,'\''+viewName+'\''));
+		}
+	});
+
+   /*
+		* 이전 페이지
+		*/
+	   function prevPage(viewName, currentPage){
+		   var page = eval(currentPage) - 1;
+   
+			   if(page < 1){
+				   page = 1;
+			   }
+		   searchView(viewName, page);
+	   }
+   
+	   /*
+		* 다음 페이지
+		*/
+	   function nextPage(viewName, currentPage, totalPageSize){
+		   var page = eval(currentPage) + 1;
+		   var totalPageSize = eval(totalPageSize);
+   
+		   if(page > totalPageSize){
+			   page = totalPageSize;
+		   }
+		   searchView(viewName, page);
+	   }
+   
+   
+	   function searchView(viewName, page){
+		   switch(viewName){
+			   case 'classMngrList' : $("#defaultpage").val(page); 
+			   console.log($("#defaultpage").val())
+			   $('#frm').attr('action', '<c:url value="list" />');
+			   $('#frm').submit();
+				break;	
+		   default :
+		   }
+	   }
+
+  function getPaging(startPage, endPage, totalPageSize, currentPage, viewName) {
+  var pagingHtml = "";
+
+  pagingHtml += '<div class="dataTables_paginate paging_full_numbers" >';
+  pagingHtml +=
+    '<a href="javascript:prevPage(' +
+    viewName +
+    "," +
+    currentPage +
+    ');" class="previous paginate_button ">Previous</a>';
+  pagingHtml += "<span>";
+
+  for (startPage; startPage <= endPage; startPage++) {
+    if (startPage == currentPage) {
+      pagingHtml +=
+        '<a href="javascript:searchView(' +
+        viewName +
+        "," +
+        startPage +
+        ');" class="paginate_button active">' +
+        startPage +
+        "</a>";
+    } else {
+      pagingHtml +=
+        '<a href="javascript:searchView(' +
+        viewName +
+        "," +
+        startPage +
+        ');" class="paginate_button">' +
+        startPage +
+        "</a>";
+    }
+  }
+  pagingHtml += "</span>";
+  pagingHtml +=
+    '<a href="javascript:nextPage(' +
+    viewName +
+    "," +
+    currentPage +
+    "," +
+    totalPageSize +
+    ');" class="next paginate_button">Next</a>';
+  pagingHtml += "</div>";
+
+  return pagingHtml;
+}
+</script>
+<form id="frm" name="frm" method="post">
+<input type="hidden" id="defaultpage" name="defaultpage" value="1"/>
 <div class="card">
   <div class="table-responsive">
     <table class="table align-items-center mb-0">
@@ -59,17 +160,11 @@
     </c:forEach>
       </tbody>
     </table>
+    <!-- page number -->
+									<div class="page_num" id="page_num"> </div>
   </div>
 </div>
 <input type="button" value="등록" onclick="location.href='/insertpage'"/>
+</form>
 </body>
-<%-- <script>
-window.onload = function(){
-    const msg = "${msg}";
-    console.log("msg===="+msg);
-    if(msg != ""){
-        alert(msg);
-    }
-}
-</script> --%>
 </html>

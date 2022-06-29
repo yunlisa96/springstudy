@@ -52,21 +52,23 @@ public class BoardController {
   }
   
   @RequestMapping("list")
-  public String list(Model model, PagingVo pagingVo, Board vo) {
-    
-    // 페이징
-		pagingVo.setCurrentPage(vo.getCurrentPage());
-		pagingVo = PagingUtil.setDefaultPaging(PagingUtil.DefaultPaging, pagingVo);
+  public String list(Model model, Board vo) {
 
+
+    // 페이징
+    System.out.println("aaaaaaaaaaa==="+vo.getDefaultpage());
+		vo.setCurrentPage(vo.getDefaultpage());
+    vo = (Board) PagingUtil.setDefaultPaging(PagingUtil.DefaultPaging, vo);
+    System.out.println("vo======"+vo);
 		int cnt = Integer.parseInt(boardSVI.listCount() + "");
-		pagingVo.setTotalRecordSize(cnt);
-    pagingVo = PagingUtil.setPaging(pagingVo);
+		vo.setTotalRecordSize(cnt);
+		vo = (Board) PagingUtil.setPaging(vo);
     
     List<Board> list = new ArrayList<Board>();
     list = boardSVI.list();
     
     model.addAttribute("list", list);
-    model.addAttribute("pagingVo", pagingVo);
+    model.addAttribute("paging", vo);
     return "/board/list";
   }
 
