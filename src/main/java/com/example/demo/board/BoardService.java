@@ -6,7 +6,7 @@ public interface BoardService {
 
   public int insert(Board board);
 
-  public List<Board> list();
+  public List<Board> list(Board vo);
 
   public int listCount();
 

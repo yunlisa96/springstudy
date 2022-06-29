@@ -24,11 +24,16 @@
 	</insert>
 
   <select id="list" resultType="com.example.demo.board.Board">
-    select * from tb_boards order by rgstr_date desc
+    select seq,
+      "content",
+      title,
+      rgstr_date,
+      updt_date,
+      user_id from tb_boards order by rgstr_date desc
     OFFSET #{limitStart} LIMIT #{recordSize}
   </select>
   
-  <select id="listCount">
+  <select id="listCount" resultType="int">
     select count(*) from tb_boards
   </select>
 

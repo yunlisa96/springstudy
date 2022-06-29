@@ -21,6 +21,12 @@ $(function() {
 		var totalPageSize = ${paging.totalPageSize};
 		var currentPage = ${paging.currentPage};
 		var totalRecordSize = ${paging.totalRecordSize}; 
+
+    		console.log(startPage);
+		console.log(endPage);
+		console.log(totalPageSize);
+		console.log(currentPage);
+		console.log(totalRecordSize);
    
 		var viewName='classMngrList';
 		if(totalRecordSize > 0){
@@ -58,7 +64,7 @@ $(function() {
 		   switch(viewName){
 			   case 'classMngrList' : $("#defaultpage").val(page); 
 			   console.log($("#defaultpage").val())
-			   $('#frm').attr('action', '<c:url value="list" />');
+			   $('#frm').attr('action', '<c:url value="/list" />');
 			   $('#frm').submit();
 				break;	
 		   default :
@@ -112,7 +118,7 @@ $(function() {
   return pagingHtml;
 }
 </script>
-<form id="frm" name="frm" method="post">
+<form id="frm" name="frm" method="get">
 <input type="hidden" id="defaultpage" name="defaultpage" value="1"/>
 <div class="card">
   <div class="table-responsive">
@@ -136,7 +142,7 @@ $(function() {
               </div> --%>
               <div class="d-flex flex-column justify-content-center">
                 <%-- <h6 class="mb-0 text-xs">John Michael</h6> --%>
-                <p class="text-xs text-secondary mb-0">${status.count}</p>
+                <p class="text-xs text-secondary mb-0">${paging.totalRecordSize - ((paging.currentPage-1) * paging.recordSize + status.index)}</p>
               </div>
             </div>
           </td>

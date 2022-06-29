@@ -6,7 +6,7 @@ public interface BoardMapper {
 
   public int insertBoard(Board vo);
 
-  public List<Board> list();
+  public List<Board> list(Board vo);
 
   public int listCount();
 

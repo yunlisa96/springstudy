@@ -56,16 +56,19 @@ public class BoardController {
 
 
     // 페이징
-    System.out.println("aaaaaaaaaaa==="+vo.getDefaultpage());
+    System.out.println("aaaaaaaaaaa==="+vo);
 		vo.setCurrentPage(vo.getDefaultpage());
     vo = (Board) PagingUtil.setDefaultPaging(PagingUtil.DefaultPaging, vo);
     System.out.println("vo======"+vo);
-		int cnt = Integer.parseInt(boardSVI.listCount() + "");
-		vo.setTotalRecordSize(cnt);
-		vo = (Board) PagingUtil.setPaging(vo);
+    int cnt = Integer.parseInt(boardSVI.listCount() + "");
+    System.out.println("cnt==========="+cnt);
+        vo.setTotalRecordSize(cnt);
+    System.out.println("aaaaaaaaaaa==="+vo.getTotalPageSize());
+    vo = (Board) PagingUtil.setPaging(vo);
+    System.out.println("aaaaaaaaaaa==="+vo);
     
     List<Board> list = new ArrayList<Board>();
-    list = boardSVI.list();
+    list = boardSVI.list(vo);
     
     model.addAttribute("list", list);
     model.addAttribute("paging", vo);

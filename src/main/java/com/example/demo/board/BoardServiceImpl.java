@@ -19,9 +19,9 @@ public class BoardServiceImpl implements BoardService {
   }
 
   @Override
-  public List<Board> list() {
+  public List<Board> list(Board vo) {
     // TODO Auto-generated method stub
-    List<Board> list = bm.list();
+    List<Board> list = bm.list(vo);
     return list;
   }
 
@@ -60,7 +60,7 @@ public class BoardServiceImpl implements BoardService {
   @Override
   public int listCount() {
     // TODO Auto-generated method stub
-    return 0;
+    return bm.listCount();
   }
   
 }
