@@ -1,7 +1,7 @@
 # springstudy
 ![GitHubLicense](https://img.shields.io/github/license/yunlisa96/springstudy)
-![GitHub reposize](https://img.shields.io/github/repo-size/hamonikr/hamonize)
-![GitHubcontributors](https://img.shields.io/github/contributors/hamonikr/hamonize)
+![GitHub reposize](https://img.shields.io/github/repo-size/yunlisa96/springstudy)
+![GitHubcontributors](https://img.shields.io/github/contributors/yunlisa96/springstudy)
 ![GitHubstars](https://img.shields.io/github/stars/hamonikr/hamonize?style=social)
 ![GitHubforks](https://img.shields.io/github/forks/yunlisa96/springstudy?style=social)
 ![GitHubissues](https://img.shields.io/github/issues/hamonikr/hamonize?style=social)
