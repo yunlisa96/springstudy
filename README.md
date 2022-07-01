@@ -1,4 +1,3 @@
-# springstudy
 ![GitHubLicense](https://img.shields.io/github/license/yunlisa96/springstudy)
 ![GitHub reposize](https://img.shields.io/github/repo-size/yunlisa96/springstudy)
 ![GitHubcontributors](https://img.shields.io/github/contributors/yunlisa96/springstudy)
@@ -17,3 +16,5 @@
 ![GitHubLastCommit](https://img.shields.io/github/last-commit/yunlisa96/springstudy)
 
 
+# Springstudy
+스프링프레임워크를 공부하고 웹 페이지를 만들어본다.
