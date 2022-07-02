@@ -2,8 +2,6 @@
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<!-- css -->
-<link href="/material/assets/css/material-kit.min.css" rel="stylesheet" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +9,7 @@
 <title>Index.jsp</title>
 </head>
 <body>
+<%@ include file="../common/menu.jsp" %>
 <form name="frm" id="frm">
     <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
     <section class="py-sm-7 py-5 position-relative">

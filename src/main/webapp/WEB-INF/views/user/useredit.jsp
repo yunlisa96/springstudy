@@ -9,6 +9,7 @@
 <title>Index.jsp</title>
 </head>
 <body>
+<%@ include file="../common/menu.jsp" %>
 <form name="frm" id="frm">
 <input type="hidden" id="seq" name="seq" value="<c:out value='${user.seq}' />" />
 id:  <input type="text" id="id" name="id" value="<c:out value='${user.id}' />"/> <br/>

@@ -9,6 +9,7 @@
 <title>Index.jsp</title>
 </head>
 <body>
+
 <form name="frm" id="frm">
 id:  <c:out value="${user.id}" /> <br/>
 pw: <c:out value="${user.pw}" /> <br/>

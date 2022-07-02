@@ -9,6 +9,7 @@
 <title>Index.jsp</title>
 </head>
 <body>
+<%@ include file="../common/menu.jsp" %>
 <form name="frm" id="frm">
 <input type="hidden" id="seq" name="seq" value="<c:out value='${board.seq}' />" />
 제목:  <input type="text" id="title" name="title" value="<c:out value='${board.title}' />"/> <br/>

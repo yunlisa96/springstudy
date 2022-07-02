@@ -2,10 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<!-- css -->
-<link href="/material/assets/css/material-kit.min.css" rel="stylesheet" />
-<!-- javascript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +9,7 @@
 <title>Index.jsp</title>
 </head>
 <body>
+<%@ include file="../common/menu.jsp" %>
 <div class="card">
     <div class="table-responsive">
         <table class="table align-items-center mb-0">

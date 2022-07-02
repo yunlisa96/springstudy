@@ -24,12 +24,8 @@
 	</insert>
 
   <select id="list" resultType="com.example.demo.board.Board">
-    select seq,
-      "content",
-      title,
-      rgstr_date,
-      updt_date,
-      user_id from tb_boards order by rgstr_date desc
+    select * 
+      from tb_boards order by rgstr_date desc
     OFFSET #{limitStart} LIMIT #{recordSize}
   </select>
   

@@ -7,6 +7,7 @@
 <title>Index.jsp</title>
 </head>
 <body>
+<%@ include file="../common/menu.jsp" %>
 <form name="frm" id="frm">
 title: <input type="text" id="title" name="title" /> <br/>
 content: <input type="text" id="content" name="content" /><br/>
