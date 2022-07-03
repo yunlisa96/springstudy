@@ -42,5 +42,9 @@ yunji:~$ git init
 yunji:~$ git clone https://github.com/yunlisa96/springstudy.git
 ```
 # Test
-test는 
+test는 test 디렉토리 하위에 아래 이미지와 같이 작성하여 단위 테스트 진행
 ![스크린샷, 2022-07-03 19-33-08](https://user-images.githubusercontent.com/84042702/177035709-1896ba00-394c-4781-b4c3-a6c853c4423c.png)
+
+#
+
+
