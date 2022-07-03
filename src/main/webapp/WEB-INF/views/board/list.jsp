@@ -139,26 +139,12 @@ $(function() {
   for (startPage; startPage <= endPage; startPage++) {
     if (startPage == currentPage) {
       pagingHtml += '<li class="page-item">';
-      pagingHtml +=
-        '<a class="page-link" href="javascript:searchView(' +
-        viewName +
-        "," +
-        startPage +
-        ');" ' +
-        startPage +
-        "</a>";
+      pagingHtml += '<a class="page-link" href="javascript:searchView('+viewName+','+startPage+');">'+startPage+'</a>';
         pagingHtml += '</li>';
     } else {
       pagingHtml += '<li class="page-item">';
-      pagingHtml +=
-        '<a class="page-link" href="javascript:searchView(' +
-        viewName +
-        "," +
-        startPage +
-        ');"' +
-        startPage +
-        "</a>";
-        pagingHtml += '</li>';
+      pagingHtml += '<a class="page-link" href="javascript:searchView('+viewName+','+startPage+');">'+startPage+'</a>';
+      pagingHtml += '</li>';
     }
   }
   pagingHtml += '<li class="page-item">';
