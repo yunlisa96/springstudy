@@ -25,7 +25,7 @@
 # Home
 ![FireShot Capture 001 - Index jsp - localhost](https://user-images.githubusercontent.com/84042702/177035373-cf900d3e-3bb1-409f-81d8-67d94fde18ed.png)
 
-# Installation
+# Installation (Ubuntu 기준)
 1. JDK 설치
 ```
 yunji:~$ sudo apt-get install openjdk-11-jdk
