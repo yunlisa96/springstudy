@@ -24,4 +24,21 @@
       now()
       )
 	</insert>
+  <select id = "productlist" resultType="com.example.demo.product.Product">
+    select * from tb_product order by rgstr_date desc
+  </select>
+
+  <select id="productinfo" resultType="com.example.demo.product.Product">
+    select * from tb_product where seq = #{seq}
+  </select>
+
+  <update id="productedit2" parameterType="com.example.demo.product.Product">
+    update tb_product set
+      product_code = #{product_code},
+      product_name = #{product_name},
+      product_price = #{product_price},
+      product_stock = #{product_stock},
+      rgstr_date =now()
+    where seq = #{seq}
+  </update>
 </mapper>

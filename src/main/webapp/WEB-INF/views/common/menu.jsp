@@ -38,7 +38,7 @@
         </li>
 
         <li class="nav-item px-3">
-          <a class="nav-link text-white opacity-8">
+          <a class="nav-link text-white opacity-8" href="/productlist">
             Product
           </a>
         </li>
