@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+  <mapper namespace="com.example.demo.product.ProductMapper">
+
+
+	<insert id="addproduct" parameterType="com.example.demo.product.Product">
+		INSERT INTO tb_product
+      (seq,
+      product_code,
+      product_name,
+      product_price,
+      product_stock,
+      rgstr_date,
+      updt_date)
+      VALUES
+      ((SELECT COALESCE(max(seq),0)+1 AS seq FROM tb_product),
+      #{product_code},
+      #{product_name},
+      #{product_price},
+      #{product_stock},
+      now(),
+      now()
+      )
+	</insert>
+</mapper>
