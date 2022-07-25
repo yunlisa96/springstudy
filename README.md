@@ -23,7 +23,7 @@
 스프링프레임워크의 작동원리에 대해 공부하고 실제 브라우저에서 확인할 수 있는 웹 페이지를 만들어보기 위한 프로젝트.
 
 # Mainpage 
-springstudy mainpage 
+### springstudy mainpage 
 + 게시판 페이지
 + 제목을 누르면 상세페이지로 이동 
 ![스크린샷, 2022-07-25 17-18-40](https://user-images.githubusercontent.com/84042702/180731363-9b234dc3-338d-4a0c-adab-2dd108fdd891.png)
@@ -33,7 +33,7 @@ springstudy mainpage
 
 
 
-springstudy Userpage (사용자 아이디)
+### springstudy Userpage (사용자 아이디)
 + 사용자 아이디 목록 페이지
 + 사용자 아이디 누르면 사용자 상세정보 페이지로 이동
 ![스크린샷, 2022-07-25 17-20-09](https://user-images.githubusercontent.com/84042702/180731632-1ba86715-4224-4ccc-8727-70b72a7ecaee.png)
@@ -43,7 +43,7 @@ springstudy Userpage (사용자 아이디)
 
 
 
-springstudy Productpage (상품관리)
+### springstudy Productpage (상품관리)
 + 상품관리 페이지 
 + 상품명 클릭하면 상품 상세정보 페이지로 이동 
 ![스크린샷, 2022-07-25 17-21-00](https://user-images.githubusercontent.com/84042702/180731806-31211685-29e4-48d8-bfdd-81c1914d693c.png)
