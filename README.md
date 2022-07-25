@@ -29,17 +29,32 @@ springstudy mainpage
 + 게시판 페이지
 + 제목을 누르면 상세페이지로 이동 
 
+
+
+
+
+
 ![스크린샷, 2022-07-25 17-20-09](https://user-images.githubusercontent.com/84042702/180731632-1ba86715-4224-4ccc-8727-70b72a7ecaee.png)
 ![Uploading 스크린샷, 2022-07-25 17-23-55.png…]()
 springstudy Userpage (사용자 아이디)
 + 사용자 아이디 목록 페이지
 + 사용자 아이디 누르면 사용자 상세정보 페이지로 이동
 
+
+
+
+
+
 ![스크린샷, 2022-07-25 17-21-00](https://user-images.githubusercontent.com/84042702/180731806-31211685-29e4-48d8-bfdd-81c1914d693c.png)
 ![스크린샷, 2022-07-25 17-25-13](https://user-images.githubusercontent.com/84042702/180732573-2a5ee104-9120-4275-b548-af26a818bb4d.png)
 springstudy Productpage (상품관리)
 + 상품관리 페이지 
 + 상품명 클릭하면 상품 상세정보 페이지로 이동 
+
+
+
+
+
 
 
 
