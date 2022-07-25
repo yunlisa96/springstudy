@@ -23,7 +23,7 @@
 스프링프레임워크의 작동원리에 대해 공부하고 실제 브라우저에서 확인할 수 있는 웹 페이지를 만들어보기 위한 프로젝트.
 
 # Mainpage 
-![FireShot Capture 001 - Index jsp - localhost](https://user-images.githubusercontent.com/84042702/177035373-cf900d3e-3bb1-409f-81d8-67d94fde18ed.png)
+![스크린샷, 2022-07-25 17-18-40](https://user-images.githubusercontent.com/84042702/180731363-9b234dc3-338d-4a0c-adab-2dd108fdd891.png)
 
 # Installation (Ubuntu 기준)
 1. JDK 설치
