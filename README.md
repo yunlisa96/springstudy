@@ -22,7 +22,7 @@
 # Motivation
 스프링프레임워크의 작동원리에 대해 공부하고 실제 브라우저에서 확인할 수 있는 웹 페이지를 만들어보기 위한 프로젝트.
 
-# Home
+# Mainpage 
 ![FireShot Capture 001 - Index jsp - localhost](https://user-images.githubusercontent.com/84042702/177035373-cf900d3e-3bb1-409f-81d8-67d94fde18ed.png)
 
 # Installation (Ubuntu 기준)
