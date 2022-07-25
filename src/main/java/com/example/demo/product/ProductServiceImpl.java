@@ -45,6 +45,15 @@ public class ProductServiceImpl implements ProductService {
         // TODO Auto-generated method stub
         return pm.productedit2(product);
     }
+
+
+
+
+    @Override
+    public int productdelete(Product product) {
+        // TODO Auto-generated method stub
+        return pm.productdelete(product);
+    }
     
     
 }

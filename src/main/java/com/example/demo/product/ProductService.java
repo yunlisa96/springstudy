@@ -10,5 +10,7 @@ public interface ProductService {
     public Product productinfo(Product product);
 
     public int productedit2(Product product);
+
+    public int productdelete(Product product);
     
 }

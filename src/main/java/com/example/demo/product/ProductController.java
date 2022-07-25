@@ -72,6 +72,13 @@ System.out.println("product===="+pp.getRgstr_date());
         return "redirect:/productlist";
     }
 
+    @RequestMapping("productdelete")
+    public String productdelete(Product product, Model model) {
+        int result = productSVI.productdelete(product);
+        return "redirect:/productlist";
+    }
+
+
 
     }
 

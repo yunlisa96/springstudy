@@ -17,7 +17,7 @@
 재고: <c:out value="${product.product_stock}" /> <br/>
 작성일: <c:out value="${product.rgstr_date}" /> <br/>
 <input type="button" value="수정" onclick="location.href='/productedit?seq=${product.seq}'"/> 
-<!-- <input type="button" value="삭제" onclick="location.href='/userdel?seq=${user.seq}'"/>-->
+<input type="button" value="삭제" onclick="location.href='/productdelete?seq=${product.seq}'"/>
 
 <input type="button" value="목록" onclick="location.href='/productlist'"/>
 </form>

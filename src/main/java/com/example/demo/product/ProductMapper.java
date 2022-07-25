@@ -11,5 +11,7 @@ public interface ProductMapper {
 
   public int productedit2(Product prodcut);
 
+  public int productdelete(Product product);
+
     
 }
