@@ -35,7 +35,7 @@ springstudy mainpage
 
 
 ![스크린샷, 2022-07-25 17-20-09](https://user-images.githubusercontent.com/84042702/180731632-1ba86715-4224-4ccc-8727-70b72a7ecaee.png)
-![Uploading 스크린샷, 2022-07-25 17-23-55.png…]()
+![스크린샷, 2022-07-25 17-23-55](https://user-images.githubusercontent.com/84042702/180732912-4275b6e1-4132-4c83-9b4f-18a4860f67c4.png)
 springstudy Userpage (사용자 아이디)
 + 사용자 아이디 목록 페이지
 + 사용자 아이디 누르면 사용자 상세정보 페이지로 이동
